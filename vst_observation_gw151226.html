@@ -134,21 +134,7 @@ aladin.on('objectHovered', function(object) {
     $('#infoDiv').html(msg);
 });
 
-// define function triggered when an object is clicked
-var objClicked;
-aladin.on('objectClicked', function(object) {
-    var msg;
-    if (object) {
-        objClicked = object;
-      object.select();
-        msg = ' The integrated probability enclosed in the FoV is  ' + object.data.name;
-    }
-    else {
-        objClicked.deselect();
-        msg = 'You clicked in void';
-    }
-    $('#infoDiv').html(msg);
-});
+
 </script>
 
 <br>
