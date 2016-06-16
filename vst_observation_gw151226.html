@@ -107,34 +107,6 @@ var moc = A.MOCFromJSON(json, {color: 'white', lineWidth: 0.4});
 aladin.addMOC(moc);
 
 
-
-var cat = A.catalog({sourceSize: 5.3});
-aladin.addCatalog(cat);
-cat.addSources([
-A.source(37.4800, 16.2200 , {name: ' P(1) = 0.010 '}), 
-A.source(39.5092, 19.2200, {name: ' P(2) = 0.011 '}), 
-A.source(41.6488, 22.2094, {name: ' P(3) = 0.012 '}),
-A.source(44.9200, 25.2200, {name: ' P(4) = 0.011 '}), 
-A.source(46.7297, 28.2200, {name: ' P(5) = 0.012 '}),
-A.source(49.5988, 31.2200, {name: ' P(6) = 0.012 '}),
-A.source(206.4717, -26.8000 , {name: ' P(7) = 0.010 '}), 
-A.source(204.9467, -23.8000, {name: ' P(8) = 0.010 '})
-
-]);
-
-// define function triggered when  a source is hovered
-aladin.on('objectHovered', function(object) {
-    var msg;
-    if (object) {
-        msg = ' The integrated probability enclosed in the FoV is  ' + object.data.name;
-    }
-    else {
-        msg = 'No object hovered';
-    }
-    $('#infoDiv').html(msg);
-});
-
-
 </script>
 
 <br>
